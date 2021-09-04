@@ -14,20 +14,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    
-    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="/public/css/style.min.css" rel="stylesheet">
     <link href="/public/css/themify-icons/themify-icons.css" rel="stylesheet">
-    <link href="/public/css/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" >
+    <link href="/public/css/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="/src/backend/custom.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    
+
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -68,7 +74,7 @@
                 <!-- End Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                   
+
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
@@ -90,8 +96,8 @@
                         <!-- ============================================================== -->
                         <li>
                             <a class="profile-pic" href="#">
-                                <img src="/public/img/user.png" alt="user-img" width="36"
-                                    class="img-circle"><span class="text-white font-medium">Lucas</span></a>
+                                <img src="/public/img/user.png" alt="user-img" width="36" class="img-circle"><span
+                                    class="text-white font-medium">Lucas</span></a>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -134,7 +140,7 @@
                                 <span class="hide-menu">Solicitações</span>
                             </a>
                         </li>
-                        
+
                     </ul>
 
                 </nav>
@@ -200,7 +206,7 @@
                 <!-- ============================================================== -->
                 <!-- PRODUCTS YEARLY SALES -->
                 <!-- ============================================================== -->
-                
+
                 <!-- ============================================================== -->
                 <!-- RECENT SALES -->
                 <!-- ============================================================== -->
@@ -210,13 +216,63 @@
                             <div class="d-md-flex mb-3">
                                 <h3 class="box-title mb-0">Solicitações recentes</h3>
                                 <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
-                                    <select class="form-select shadow-none row border-top">
-                                        <option>March 2021</option>
-                                        <option>April 2021</option>
-                                        <option>May 2021</option>
-                                        <option>June 2021</option>
-                                        <option>July 2021</option>
-                                    </select>
+                                    <p class="newSolic">
+                                        <button type="button" class="btn btn-outline-success" data-toggle="modal"
+                                            data-target="#addSolicitacaoModal">
+                                            Criar solicitação
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="addSolicitacaoModal" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="addSolicitacaoModalLabel">Criar solicitação</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post" id="insert_form">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Titulo</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="titulo" type="text" class="form-control"
+                                                            id="titulo" placeholder="Digite o titulo da solicitação">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Descrição</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea name="descrição" type="text" class="form-control" id="descricao" placeholder="Digite a descrição do problema"></textarea>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Horario de atendimento</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="horaA" type="text" class="form-control" id="horaA" placeholder="Digite a hora de atendimento desejada">
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Preço medio</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="PrecoM" type="text" class="form-control" id="PrecoM" placeholder="Digite o valor medio que pagará pelo serviço">
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <input type="submit" name="CadUser" id="CadUser" value="Criar" class="btn btn-outline-success">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="table-responsive">
@@ -244,30 +300,31 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- ============================================================== -->
                 <!-- Recent Comments -->
                 <!-- ============================================================== -->
-                
-                    
-                    <!-- /.col -->
-                </div>
+
+
+                <!-- /.col -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center"> 
-                <p> 2021 © Easy Services, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> 
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid  -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+            <p> 2021 © Easy Services, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->
@@ -275,7 +332,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    
+
 </body>
 
 </html>
