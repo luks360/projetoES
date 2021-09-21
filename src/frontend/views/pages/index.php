@@ -105,44 +105,38 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="../../../../public/img/index.jpg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" style="filter: brightness(33%);">
 
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            <h1>Quem somos</h1>
+                            <p>A ES procura ajudar a resolver problemas rapidamente.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#quemsomos">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="../../../../public/img/clientes-banner.jpeg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" style="filter: brightness(33%);">
 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            <h1>Tem algum problema que precisa de profissionais?</h1>
+                            <p>Se cadastrando no nosso sistema você resolverá tudo e muito mais.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#paraclientes">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="#777" />
-                    </svg>
+                    <img class="bd-placeholder-img" width="100%" height="100%" src="../../../../public/img/empresas-banner.jpeg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" style="filter: brightness(33%);">
 
                     <div class="container">
                         <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            <h1>Ei, você que é empresa</h1>
+                            <p>Que tal aumentar sua rede de clientes e lucros? é simples e fácil, basta se cadastrar.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#paraempresas">Saiba mais</a></p>
                         </div>
                     </div>
                 </div>
@@ -172,9 +166,8 @@
                     </div>
 
                     <h2>Fotografos</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is
-                        the first column.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver detalhes &raquo;</a></p>
+                    <p>Precisa de alguém para tirar aquela foto daquele momento especial? aqui te ajudamos a achar a pessoa ideal.</p>
+                    
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="img">
@@ -182,9 +175,8 @@
                     </div>
 
                     <h2>Construções</h2>
-                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the
-                        second column.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver detalhes &raquo;</a></p>
+                    <p>Se você precisa de profissionais para te ajudar na construção de algo, você poderá achar aqui.</p>
+                    
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="img">
@@ -192,8 +184,8 @@
                     </div>
 
                     <h2>Técnicos</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver detalhes &raquo;</a></p>
+                    <p>Aquele seu computador velho ou outro eletronico está com problema? ache a pessoa certa para consertar aqui.</p>
+                    
                 </div><!-- /.col-lg-4 -->
 
                 <div class="col-lg-4">
@@ -202,9 +194,8 @@
                     </div>
 
                     <h2>Transportadoras</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is
-                        the first column.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver detalhes &raquo;</a></p>
+                    <p>Precisa enviar algo há um parente distante ou está de mudanças? ache quem pode levar suas coisas de forma confiavel.</p>
+                    
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="img">
@@ -212,9 +203,8 @@
                     </div>
 
                     <h2>Reformas</h2>
-                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the
-                        second column.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver detalhes &raquo;</a></p>
+                    <p>Se é de reforma que você precisa, aqui você terá profissionais para te ajudar!</p>
+                    
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <div class="img">
@@ -222,8 +212,8 @@
                     </div>
 
                     <h2>Mecânicos</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
-                    <p><a class="btn btn-secondary" href="#">Ver detalhes &raquo;</a></p>
+                    <p>Se seu veiculo parou de funcianar, aqui é o lugar onde você poderá recorrer por ajuda!</p>
+                    
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
@@ -232,9 +222,9 @@
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" id="quemsomos">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">O que é o Easy Services? <span class="text-muted"> Um pouco sobre
+                    <h2 class="featurette-heading ">O que é o Easy Services? <span class="text-muted"> Um pouco sobre
                             nós.</span></h2>
                     <p class="lead">O ES é um projeto de sistema que visá melhorar no atendimento e demandas de diversos
                         tipos de serviços, e ajudar o cliente a ter seus problemas resolvidos de forma rapida e facil.
@@ -248,7 +238,7 @@
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" id="paraempresas">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading">Sou uma empresa, o que eu posso fazer? <span class="text-muted">Confira abaixo.</span></h2>
                     <p class="lead">Primeiramente você terá que ter uma conta em nosso sistema para obter suas vantagens. Vantagens que são: </p><br/>
@@ -264,10 +254,10 @@
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" id="paraclientes">
                 <div class="col-md-7">
                     <h2 class="featurette-heading">O que eu como cliente posso fazer? <span class="text-muted">Simples, seja ajudado!</span></h2>
-                    <p class="lead">Obviamente você primeiro terá que ter um cadastro no sistema, e depois disso você poderá </p><br/>
+                    <p class="lead">Obviamente você primeiro terá que ter um cadastro no sistema, e depois disso você poderá: </p><br/>
                     <li class="lead">Solicitar serviços diversos;</li>
                     <li class="lead">Escolher qual das empresas que mostrou interesse que irá atender a solicitação.</li>
                 </div>

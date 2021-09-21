@@ -27,12 +27,11 @@ if(!$login_button == ''){
     <link href="../../../../public/css/style.min.css" rel="stylesheet">
     <link href="../../../../public/css/themify-icons/themify-icons.css" rel="stylesheet">
     <link href="../../../../public/css/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
-    <script src="../../../backend/custom.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+    <script src="../../../backend/custom.js"></script>
     
 </head>
 
