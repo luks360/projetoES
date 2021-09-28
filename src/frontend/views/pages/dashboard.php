@@ -1,4 +1,6 @@
-<?php include('../../../backend/sessions.php'); 
+<?php 
+include('../../../backend/sessions.php');
+include('../../../backend/control.php');  
 
 if(!$login_button == ''){
     header('location: index.php');
@@ -206,7 +208,7 @@ if(!$login_button == ''){
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Solicitações criadas</h3>
                             <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li class="ms-auto"><span class="counter text-success">20</span></li>
+                                <li class="ms-auto"><span class="counter text-success"><?php echo count($servicos) ?></span></li>
                             </ul>
                         </div>
                     </div>
@@ -314,18 +316,133 @@ if(!$login_button == ''){
                                             <th class="border-top-0">#</th>
                                             <th class="border-top-0">Titulo</th>
                                             <th class="border-top-0">Tipo</th>
-                                            <th class="border-top-0">Data</th>
+                                            <th class="border-top-0">Hora</th>
                                             <th class="border-top-0">Situação</th>
+                                            <th class="border-top-0">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                        
+                                        <?php
+
+                                            $contar = 0;
+                                            $servicosR = array_reverse($servicos, false);
+                                            foreach ( $servicosR as $e ){
+                                            echo '<tr>';
+                                            echo '<td>'. $e['id_servico'] .'</td>';
+                                            echo '<td>'. $e['titulo_anuncio'] .'</td>';
+                                            echo '<td>'. $e['area_atuacao'] .'</td>';
+                                            echo '<td>'. $e['horario_atendimento'] .'</td>';
+                                            echo '<td></td>';
+                                            echo '<td>
+                                            <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Finalizar" data-toggle="modal"
+                                            data-target="#finalizarSolicitacaoModal"><span class="ti-check"></span></button>
+                                            <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar" style="margin-left: 5px" data-toggle="modal"
+                                            data-target="#editarSolicitacaoModal"><span class="ti-pencil-alt"></span></button>
+                                            <button class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Excluir" style="margin-left: 5px" data-toggle="modal"
+                                            data-target="#excluirSolicitacaoModal"><span class="ti-trash"></span></button></td>';
+                                            echo '</tr>';
+                                            
+                                            $contar++;
+                                            if($contar == 7)
+                                                break;
+                                            }
+                                        ?>
+                                        
+                                        <?php
+                                        $servicosR = array_reverse($servicos, false);
+                                        foreach ( $servicosR as $e ){
+                                            echo '<div class="modal fade" id="editarSolicitacaoModal" tabindex="-1" aria-labelledby="editarSolicitacaoLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="editarSolicitacaoLabel">Editar solicitação</h5>
+                                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                            <form method="post" id="insert_form">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Titulo</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="titulo" type="text" class="form-control"
+                                                            id="titulo" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Descrição</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea name="descrição" type="text" class="form-control" id="descricao"></textarea>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Horario de atendimento</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="horaA" type="text" class="form-control" id="horaA" value="">
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Preço medio</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="PrecoM" type="text" class="form-control" id="PrecoM" value=""> 
+                                                    </div>
+                                                </div>
+            
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Categoria</label>
+                                                    <div class="col-sm-10">
+                                                        <input name="categoria" type="text" class="form-control" id="categoria" value="">
+                                                    </div>
+                                                </div>
+                                                
+                                                </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-primary">Salvar alterações</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                        </div>';
+                                        }
+                                        ?>
+                                        <div class="modal fade" id="excluirSolicitacaoModal" tabindex="-1" aria-labelledby="excluirSolicitacaoLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="excluirSolicitacaoLabel">Excluir solicitação</h5>
+                                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h6>Você tem certeza que quer excluir essa solicitação?</h6>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-primary">Sim, eu quero</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal fade" id="finalizarSolicitacaoModal" tabindex="-1" aria-labelledby="finalizarSolicitacaoLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="finalizarSolicitacaoLabel">Finalizar solicitação</h5>
+                                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h6>Você tem certeza que quer finalizar essa solicitação?</h6>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-primary">Sim, eu quero</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </tbody>
                                 </table>
                             </div>
